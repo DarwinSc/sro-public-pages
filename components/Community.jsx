@@ -3,7 +3,7 @@ import SectionHeading from './SectionHeading'
 
 export default function Community() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6" aria-labelledby="comunidad">
+    <section className="reveal mx-auto max-w-7xl px-4 py-16 sm:px-6" aria-labelledby="comunidad">
       <SectionHeading eyebrow="Únete a la aventura" title={<span id="comunidad">Comunidad</span>} />
 
       <div className="grid gap-6 lg:grid-cols-3 lg:grid-rows-[auto_1fr]">

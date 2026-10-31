@@ -1,8 +1,9 @@
+import Image from 'next/image'
 import { features } from '@/lib/site'
 
 export default function Features() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6" aria-label="Características del servidor">
+    <section className="reveal mx-auto max-w-7xl px-4 py-16 sm:px-6" aria-label="Características del servidor">
       <div className="grid gap-6 md:grid-cols-3">
         {features.map((f) => (
           <article
@@ -10,11 +11,12 @@ export default function Features() {
             className="group panel relative overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-gold/50"
           >
             <div className="relative aspect-[848/320] overflow-hidden bg-[radial-gradient(ellipse_at_70%_40%,#2a2238,#13131a_70%)]">
-              <img
+              <Image
                 src={f.image}
                 alt={f.title}
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                loading="lazy"
+                fill
+                sizes="(min-width: 768px) 33vw, 100vw"
+                className="object-cover transition duration-500 group-hover:scale-105"
               />
             </div>
             <div className="p-5">

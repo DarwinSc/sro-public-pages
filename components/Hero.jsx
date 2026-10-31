@@ -1,4 +1,7 @@
 import { links, server } from '@/lib/site'
+import Image from 'next/image'
+import heroImage from '@/public/assets/img/bg.jpg'
+import Embers from './Embers'
 import ServerClock from './ServerClock'
 
 export default function Hero() {
@@ -7,14 +10,15 @@ export default function Hero() {
   return (
     <section className="relative isolate flex min-h-[92svh] items-end overflow-hidden pt-28 pb-10">
       <div className="absolute inset-0 -z-10">
-        <img src="/assets/img/bg.jpg" alt="" className="animate-slow-zoom h-full w-full object-cover object-center" />
+        <Image src={heroImage} alt="" priority placeholder="blur" sizes="100vw" className="animate-slow-zoom h-full w-full object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/30 to-ink" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#0b0b0f_95%)]" />
         <div className="absolute inset-x-0 top-1/4 mx-auto h-[420px] max-w-3xl rounded-full bg-ink/60 blur-3xl" />
+        <Embers />
       </div>
 
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="fade-up mx-auto max-w-3xl text-center">
           <p className="mb-4 font-display text-xs tracking-[0.3em] text-gold-light uppercase [text-shadow:0_2px_8px_#000] sm:text-sm sm:tracking-[0.4em]">Servidor privado · Free to play</p>
           <h1 className="section-title !text-5xl leading-tight sm:!text-7xl">Silkroad Latino</h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-text/90 [text-shadow:0_2px_10px_#000]">
@@ -28,7 +32,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <dl className="panel mx-auto mt-14 grid max-w-4xl grid-cols-2 divide-line bg-ink/70 backdrop-blur-md sm:grid-cols-4 sm:divide-x">
+        <dl className="panel mx-auto mt-14 grid max-w-4xl grid-cols-2 divide-line bg-ink/70 backdrop-blur-md sm:grid-cols-4 sm:divide-x fade-up [animation-delay:250ms]">
           <Stat label="Servidor">
             <span className="flex items-center gap-2">
               <span className="relative flex h-2.5 w-2.5">

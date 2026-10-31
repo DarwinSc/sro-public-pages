@@ -1,4 +1,5 @@
 import { fortressWar, links, liveEvents, upcomingEvents } from '@/lib/site'
+import FortressCountdown from './FortressCountdown'
 
 export default function Events() {
   return (
@@ -33,6 +34,10 @@ export default function Events() {
             <h3 className="font-display text-lg font-bold text-gold-light">Fortress War</h3>
             <p className="text-xs text-text/80">{fortressWar.schedule}</p>
           </div>
+        </div>
+        <div className="bg-ink/60 px-4 pt-3">
+          <p className="mb-2 text-[11px] tracking-widest text-muted uppercase">Próxima batalla en</p>
+          <FortressCountdown />
         </div>
         <ul className="divide-y divide-line bg-ink/60">
           {fortressWar.fortresses.map((f) => (
