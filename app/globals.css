@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+@import '@fontsource/cinzel/600.css';
+@import '@fontsource/cinzel/800.css';
+@import '@fontsource-variable/inter';
+
+@theme {
+  --color-ink: #0b0b0f;
+  --color-surface: #13131a;
+  --color-surface-2: #1a1a23;
+  --color-line: #2a2632;
+  --color-gold: #d4a64a;
+  --color-gold-light: #f0d38a;
+  --color-gold-dark: #8a6a2a;
+  --color-text: #ece7da;
+  --color-muted: #9b958a;
+  --color-live: #4ade80;
+
+  --font-display: 'Cinzel', serif;
+  --font-sans: 'Inter Variable', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink text-text font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-gold text-ink;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 font-display text-sm font-semibold tracking-widest uppercase text-ink transition;
+    background: linear-gradient(180deg, var(--color-gold-light), var(--color-gold) 55%, var(--color-gold-dark));
+    box-shadow: 0 0 0 1px #f0d38a55 inset, 0 8px 30px -8px #d4a64a99;
+  }
+  .btn-gold:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 0 0 1px #f0d38a88 inset, 0 10px 40px -6px #d4a64acc;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-gold/40 bg-ink/40 px-6 py-3 font-display text-sm font-semibold tracking-widest uppercase text-gold-light backdrop-blur transition hover:border-gold hover:bg-gold/10;
+  }
+  .panel {
+    @apply rounded-xl border border-line bg-surface/80;
+    box-shadow: 0 1px 0 #ffffff08 inset;
+  }
+  .panel-title {
+    @apply flex items-center gap-3 font-display text-lg font-semibold tracking-wider text-gold-light uppercase;
+  }
+  .panel-title::after {
+    content: '';
+    @apply h-px flex-1;
+    background: linear-gradient(90deg, #d4a64a66, transparent);
+  }
+  .section-title {
+    @apply font-display text-3xl font-extrabold tracking-wide uppercase sm:text-4xl;
+    background: linear-gradient(180deg, #fff6dc, var(--color-gold) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@keyframes slow-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+.animate-slow-zoom {
+  animation: slow-zoom 20s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-slow-zoom { animation: none; }
+}

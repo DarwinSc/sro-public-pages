@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Silkroad Latino · Página pública
 
-## Getting Started
+Landing page de Silkroad Latino hecha con **Next.js 16**, **React 19** y **Tailwind CSS 4**.
 
-First, run the development server:
+## Desarrollo
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre <http://localhost:3000>.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Estructura
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
+app/
+  layout.js       metadatos, idioma y estilos globales
+  page.js         arma la página con los componentes
+  globals.css     colores, tipografías y estilos de botones/paneles
+components/       una pieza por sección (Header, Hero, News, Rankings, Events…)
+lib/site.js       TODO el contenido: enlaces, rankings, eventos, noticias, GMs
+public/assets/img imágenes
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Actualizar el contenido
 
-## Learn More
+Todo el texto y los datos están en `lib/site.js`. Para cambiar noticias, rankings,
+eventos o GMs se edita solo ese archivo.
 
-To learn more about Next.js, take a look at the following resources:
+La dirección del sitio oficial está en la constante `SITE_URL`; todos los enlaces
+se construyen a partir de ella.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Despliegue
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Vercel lo detecta como proyecto Next.js: cada push a la rama principal se publica solo.
