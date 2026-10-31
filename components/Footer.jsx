@@ -3,8 +3,8 @@ import { footer, links } from '@/lib/site'
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-[#08080b]">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.2fr_repeat(4,1fr)]">
-        <div>
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-10 px-4 py-14 sm:px-6 md:grid-cols-4 lg:grid-cols-[1.2fr_repeat(4,1fr)]">
+        <div className="col-span-2 md:col-span-4 lg:col-span-1">
           <img src="/assets/img/logo.png" alt="Silkroad Latino" className="h-20 w-auto" />
           <p className="mt-4 text-sm text-muted">Silkroad Latino es absolutamente libre de jugar.</p>
         </div>

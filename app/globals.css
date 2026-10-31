@@ -33,7 +33,7 @@
 
 @layer components {
   .btn-gold {
-    @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 font-display text-sm font-semibold tracking-widest uppercase text-ink transition;
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 whitespace-nowrap font-display text-sm font-semibold tracking-widest uppercase text-ink transition;
     background: linear-gradient(180deg, var(--color-gold-light), var(--color-gold) 55%, var(--color-gold-dark));
     box-shadow: 0 0 0 1px #f0d38a55 inset, 0 8px 30px -8px #d4a64a99;
   }
@@ -42,7 +42,7 @@
     box-shadow: 0 0 0 1px #f0d38a88 inset, 0 10px 40px -6px #d4a64acc;
   }
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-md border border-gold/40 bg-ink/40 px-6 py-3 font-display text-sm font-semibold tracking-widest uppercase text-gold-light backdrop-blur transition hover:border-gold hover:bg-gold/10;
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-gold/40 whitespace-nowrap bg-ink/40 px-6 py-3 font-display text-sm font-semibold tracking-widest uppercase text-gold-light backdrop-blur transition hover:border-gold hover:bg-gold/10;
   }
   .panel {
     @apply rounded-xl border border-line bg-surface/80;

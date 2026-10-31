@@ -24,18 +24,18 @@ export default function News() {
         href={featured.href}
         className="group panel relative mb-6 block overflow-hidden transition hover:border-gold/50"
       >
-        <div className="relative aspect-[16/8] overflow-hidden">
+        <div className="relative aspect-[16/9] overflow-hidden sm:aspect-[16/8]">
           <Image src={featured.image} alt="" fill sizes="(min-width: 1024px) 66vw, 100vw" className="object-cover transition duration-700 group-hover:scale-105" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+        <div className="absolute inset-0 hidden bg-gradient-to-t from-ink via-ink/40 to-transparent sm:block" />
+        <div className="p-5 sm:absolute sm:inset-x-0 sm:bottom-0 sm:p-8">
           <Meta item={featured} />
           <h3 className="mt-2 font-display text-2xl font-bold text-text sm:text-3xl">{featured.title}</h3>
           <p className="mt-2 max-w-2xl text-text/80">{featured.excerpt}</p>
         </div>
       </a>
 
-      <div className="grid gap-6 sm:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-3">
         {rest.map((item) => (
           <a key={item.href} href={item.href} className="group panel overflow-hidden transition hover:-translate-y-1 hover:border-gold/50">
             <div className="relative aspect-[16/9] overflow-hidden">
@@ -55,7 +55,7 @@ export default function News() {
 
 function Meta({ item }) {
   return (
-    <div className="flex items-center gap-3 text-xs">
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs whitespace-nowrap">
       <span className="rounded-full border border-gold/40 bg-gold/10 px-2.5 py-0.5 font-semibold text-gold-light">{item.category}</span>
       <time dateTime={item.date} className="text-muted">{formatDate(item.date)}</time>
     </div>

@@ -23,7 +23,7 @@ export default function Home() {
             <News />
             <ActivityLog />
           </div>
-          <aside className="min-w-0 space-y-6 lg:pt-[76px]">
+          <aside className="grid min-w-0 grid-cols-1 content-start gap-6 md:grid-cols-2 lg:grid-cols-1 lg:pt-[76px]">
             <Rankings />
             <Events />
           </aside>

@@ -19,7 +19,7 @@ export default function Hero() {
 
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
         <div className="fade-up mx-auto max-w-3xl text-center">
-          <p className="mb-4 font-display text-xs tracking-[0.3em] text-gold-light uppercase [text-shadow:0_2px_8px_#000] sm:text-sm sm:tracking-[0.4em]">Servidor privado · Free to play</p>
+          <p className="mb-4 font-display text-[11px] tracking-[0.2em] text-gold-light uppercase [text-shadow:0_2px_8px_#000] sm:text-sm sm:tracking-[0.4em]">Servidor privado · Free to play</p>
           <h1 className="section-title !text-5xl leading-tight sm:!text-7xl">Silkroad Latino</h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-text/90 [text-shadow:0_2px_10px_#000]">
             Tu siguiente gran aventura aguarda en la Ruta de la Seda. Únete a la comunidad latina más grande de Silkroad Online.
