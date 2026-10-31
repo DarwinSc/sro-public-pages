@@ -2176,7 +2176,7 @@ ul.rankings-nav > li > a > span.img.unique {
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-*/ @font-face {
+@font-face {
   font-display: auto;
   font-family: "FontAwesome";
   src: url("/assets/fontawesome-webfont.eot?v=4.6.3");
